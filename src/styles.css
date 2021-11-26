@@ -1,0 +1,45 @@
+body {
+
+  background: linear-gradient(
+    43deg,
+    #15181C 0%,
+    #21252B 46%,
+    #383E4A 100%
+  ) no-repeat fixed  ;
+  background-size: cover;
+
+  margin: 0px;
+  font-family: "Fira Code", monospace;
+
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+
+  animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+a {
+  color: white;
+}
+body::selection {
+  color: none;
+  background: none;
+}
+#root{
+  display: inline-block;
+
+  pointer-events: none;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}

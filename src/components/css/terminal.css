@@ -1,0 +1,47 @@
+#terminal {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 300px;
+  max-height: fit-content;
+  background: #111111b2;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  pointer-events: auto;
+  z-index: 3;
+  color: #70EEFF;
+  
+
+}
+#terminal:focus{
+    outline: none;
+}
+
+#command-line span {
+  color: aquamarine;
+  position: relative;
+  left: 10px;
+  outline: 0px solid transparent;
+  pointer-events:none;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1rem;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+
