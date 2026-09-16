@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://morizin.github.io/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://morizin.github.io/projects.html</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://morizin.github.io/about.html</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://morizin.github.io/writing.html</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://morizin.github.io/projects/movement-safety/</loc><lastmod>2026-08-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><image:image><image:loc>https://morizin.github.io/assets/movement-safety.webp</image:loc><image:title>Movement Safety</image:title></image:image></url>
+  <url><loc>https://morizin.github.io/projects/mnist-cuda/</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><image:image><image:loc>https://morizin.github.io/assets/desk.webp</image:loc><image:title>MNIST in hand-written CUDA</image:title></image:image></url>
+  <url><loc>https://morizin.github.io/projects/crash-detector/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><image:image><image:loc>https://morizin.github.io/assets/edge-camera.webp</image:loc><image:title>Crash Detector</image:title></image:image></url>
+  <url><loc>https://morizin.github.io/projects/making-ai-beneficial/</loc><lastmod>2025-02-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://morizin.github.io/projects/tuberculosis-detection/</loc><lastmod>2026-01-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

@@ -1,0 +1,49 @@
+# Mohammed Rizin (morizin)
+
+> Mohammed Rizin V K — AI/ML Solution Architect. I build intelligent systems for real-world problems. Based in Malappuram, Kerala ⇄ Mumbai, India.
+> Site: https://morizin.github.io/ · Contact: hello@morizin.com
+
+I'm an AI/ML solution architect who moves between research and production. I take intelligent systems from the first sketch to something that actually runs in the world — the model, the edge, and the interface designed as one thing.
+
+Most of my work sits where machine learning meets a real environment: a warehouse aisle, a stadium, a desk, a device on a pole. The question is always the same — does this make someone's day safer, clearer, or better?
+
+## Projects
+- [Movement Safety](https://morizin.github.io/projects/movement-safety/): Can synchronised accelerometer and gyroscope data from several consenting phones characterise a physical interaction? A controlled-experiment prototype in Rust. (Sensing & Safety · IMU / Sensor ML · Research prototype)
+- [MNIST in hand-written CUDA](https://morizin.github.io/projects/mnist-cuda/): A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN. (Systems & Compute · CUDA / Systems · Prototype)
+- [Crash Detector](https://morizin.github.io/projects/crash-detector/): Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact. (Vehicles & Safety · Multi-modal ML · In progress)
+- [Upstage: Making AI Beneficial](https://morizin.github.io/projects/making-ai-beneficial/): A 0.966 solution to Upstage's sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public. (Competitions · Sequence models · Shipped)
+- [Tuberculosis Detection](https://morizin.github.io/projects/tuberculosis-detection/): Binary TB screening from chest X-rays with a Keras model behind a one-page Streamlit app — upload a radiograph, get a call. Research and education only. (Medical Imaging · Computer Vision · Prototype)
+
+## Writing
+- [How we won VinBigData: an ensemble built to agree like radiologists](https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/) (2026-09-17): First place in the VinBigData Chest X-ray Abnormalities Detection competition — a three-tier detector ensemble fused with a consensus variant of Weighted Boxes Fusion, the metric quirk we found, four things that did not work, and the submission we should have picked.
+
+## Services
+- Discovery sprint — [TODO] from ₹—: [TODO] One to two weeks to turn a problem statement into a scoped, costed plan — data audit, feasibility, first architecture.
+- Working prototype — [TODO] from ₹—: [TODO] Four to eight weeks to a demonstrable system on real data — model, pipeline, and a thin interface.
+- Production build & deployment — [TODO] from ₹—: [TODO] Taking a validated prototype to something that survives the field — monitoring, retraining, integration.
+- Architecture advisory — [TODO] ₹— / month: [TODO] Ongoing architecture and review time for teams already building — a few hours a week, async-first.
+
+## Facts
+- Kaggle Competitions Master: 3 gold · 8 silver · 1 bronze across 66 competitions; peak global rank #38.
+- 1st place — VinBigData Chest X-ray Abnormalities Detection: Team of four; consensus-fusion detector ensemble.
+- 2nd place — Bristol-Myers Squibb Molecular Translation: Image-to-InChI sequence modelling.
+- Upstage: Making AI Beneficial — 0.966: SAINT transformer with pseudo-labelling and ensembling; code public.
+- Zindi Competition Winner: 1st place, Crop Yield Prediction.
+- Smart India Hackathon Finalist: Top 3 — computer vision for safer public spaces.
+- Present: Founding Engineer at Medulla — Applied ML from prototype to product.
+- May – Aug 2023: Deep Learning Intern at NVIDIA — Deep learning optimisation and deployment on the CUDA / TensorRT stack.
+- Jan 2022 – Apr 2023: AI/ML Engineer at Fathom Solutions — Computer vision for industrial and retail, PoC to production.
+- 2021 – 2024: BS, Data Science (online), IIT Madras
+- 2019 – 2023: B.Tech, Computer Science & Engineering, Amity University Mumbai
+
+## Elsewhere
+- LinkedIn: https://www.linkedin.com/in/morizin
+- GitHub: https://github.com/morizin
+- X: https://x.com/MohammedRizin
+- Kaggle: https://www.kaggle.com/morizin
+- Medium: https://medium.com/@mrizin2013
+- Website: https://morizin.me
+
+## Optional
+- [Full text of every page](https://morizin.github.io/llms-full.txt)
+- [Sitemap](https://morizin.github.io/sitemap.xml)
