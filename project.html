@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3856T8LSWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3856T8LSWV');
+  window.MZ_TRACK = function (name, params) { gtag('event', name, params || {}); };
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project — morizin</title>
+<meta name="description" content="A project by morizin — approach, timeline and artefacts." />
+<meta name="robots" content="noindex,follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+<script>(function(){var r="morizin.theme",c={paper:"#F6F1E9",cadet:"#22324E"};function o(){try{return localStorage.getItem(r)}catch(e){return null}}function n(e){document.documentElement.setAttribute("data-theme",e);var a=document.querySelector('meta[name="theme-color"]');a&&a.setAttribute("content",c[e]||c.paper)}var t=o();t!=="paper"&&t!=="cadet"&&(t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"cadet":"paper"),n(t),window.MORIZIN_THEME={get:function(){return document.documentElement.getAttribute("data-theme")||"paper"},set:function(e){n(e);try{localStorage.setItem(r,e)}catch(a){}},toggle:function(){var e=this.get()==="cadet"?"paper":"cadet";return this.set(e),e}}})();</script>
+<link rel="stylesheet" href="css/site.css?v=3998bb48">
+<link rel="icon" href="assets/star.svg" type="image/svg+xml">
+</head>
+<body>
+<!-- Client-rendered fallback. The indexable pages are the static ones the
+     build writes to projects/<id>/ — this one forwards to them. -->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagehead">
+  <div class="wrap">
+    <a class="brandmark" href="index.html" aria-label="morizin — home">morizin</a>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="headcta">
+      <button class="theme" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap" id="detail" aria-live="polite">
+    <div class="skeleton" style="margin-top:30px;">
+      <div class="sk"><div class="a"></div><div class="b"></div><div class="c"></div></div>
+      <div class="sk"><div class="a"></div><div class="b"></div><div class="c"></div></div>
+      <div class="sk"><div class="a"></div><div class="b"></div><div class="c"></div></div>
+    </div>
+  </div>
+
+  <section class="wrap reveal" id="related-sec" hidden style="padding-block:30px 70px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin:0 0 20px;">
+      <div><span class="eyebrow">Connected nodes</span><h2 class="h-2" style="margin-top:12px;">Related projects</h2></div>
+      <a class="btn sm ghost" href="projects.html">All projects <span class="arw" aria-hidden="true">→</span></a>
+    </div>
+    <div class="listview" id="related"></div>
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap">
+    <p class="q">“Systems for a more human future.”<span class="by">— morizin</span></p>
+    <div class="mega" aria-hidden="true">morizin</div>
+    <div class="cols">
+      <div><span class="mono">The practice</span><ul style="margin-top:12px;"><li><a href="index.html">Home</a></li><li><a href="writing.html">Writing</a></li><li><a href="about.html">About Mohammed</a></li><li class="edit-only"><a href="studio.html">Content studio</a></li></ul></div>
+      <div><span class="mono">Elsewhere</span><ul style="margin-top:12px;" id="foot-social"></ul></div>
+      <div><span class="mono">Contact</span><ul style="margin-top:12px;"><li><a id="foot-email" href="mailto:itsmorizin@gmail.com">itsmorizin@gmail.com</a></li><li><a id="foot-cal" href="#" rel="noopener" target="_blank">Book a call</a></li><li><span id="foot-loc" style="color:var(--muted);font-size:14.5px;"></span></li></ul></div>
+    </div>
+    <div class="meta"><span>© <span id="year"></span> morizin</span></div>
+  </div>
+</footer>
+
+<script src="js/site.js?v=2757b441"></script>
+<script>
+MZ.initNav(); MZ.initReveal();
+var detail = document.getElementById('detail');
+function notFound(msg) {
+  document.title = 'Not found — morizin';
+  detail.innerHTML = '<div class="state"><h3>Project not found</h3><p>' + MZ.esc(msg || 'That project no longer exists, or the link is out of date.') + '</p>' +
+    '<div class="row"><a class="btn sm" href="projects.html">Back to projects</a></div></div>';
+}
+MZ.load().then(function (c) {
+  MZ.fillFooter(c.profile);
+  var id = MZ.param('id');
+  var p = c.projects.filter(function (x) { return x.id === id; })[0];
+  if (!p) { notFound(id ? 'No project with id “' + id + '”.' : 'No project id was given.'); return; }
+  document.title = p.title + ' — morizin';
+  var m = document.querySelector('meta[name=description]'); if (m) m.setAttribute('content', p.summary || p.title);
+  detail.innerHTML = MZ.projectPage(p, '');
+  MZ.mountSubgraph(document.getElementById('subgraph'));
+  var rel = MZ.relatedProjects(c.projects, p);
+  if (rel.length) {
+    document.getElementById('related-sec').hidden = false;
+    document.getElementById('related').innerHTML = rel.map(MZ.listCard).join('');
+  }
+}).catch(function (e) { notFound(e.message || ''); });
+</script>
+</body>
+</html>

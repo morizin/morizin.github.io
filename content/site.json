@@ -1,0 +1,619 @@
+{
+  "profile": {
+    "name": "Mohammed Rizin",
+    "handle": "morizin",
+    "role": "Machine Learning Engineer",
+    "tagline": "Systems for a more human future.",
+    "headline": "I build ML systems — and the tests that decide whether a model actually did the work.",
+    "location": "Mumbai, India · works remotely",
+    "status": "ML Evaluation Engineer on contract at Shipd / DataCurve · ex-NVIDIA · B.Tech CSE at Amity Mumbai and BS Data Science at IIT Madras, both due 2028 · open to roles and collaborations",
+    "email": "itsmorizin@gmail.com",
+    "website": "https://morizin.me",
+    "socials": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/morizin"
+      },
+      {
+        "label": "Kaggle",
+        "href": "https://www.kaggle.com/morizin"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/itsmorizin"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/MohammedRizin"
+      },
+      {
+        "label": "Medium",
+        "href": "https://medium.com/@mrizin2013"
+      }
+    ],
+    "about": [
+      "I'm a machine learning engineer. Right now I'm on contract with Shipd / DataCurve, and earlier this year with Mercor — work I can name but not describe. What I can talk about is on this site: the projects, the competition record, and the writing.",
+      "Before that, four years of production engineering. Founding ML researcher at Medulla, where I built an LLM-backed clinical assistant with a retrieval-and-citation pipeline over a curated medical corpus and led a team of three through three pivots. Deep learning engineer at Fathom Solutions, doubling a road-damage detector's mAP and shipping it to the browser with TensorFlow.js. Deep learning intern at NVIDIA, where I learned distributed multi-GPU training, Docker and Triton-served inference, and wrote conversion scripts that shipped as Deep Learning Institute course material.",
+      "I'm a Kaggle Competitions Master — 12 medals, most of them in code competitions where the organiser runs your submission against a hidden test set under a fixed compute budget — and I'm finishing two degrees at once: a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both due in 2028. I'm from Malappuram, Kerala, and work from Mumbai."
+    ],
+    "portrait": "",
+    "experience": [
+      {
+        "org": "Shipd / DataCurve",
+        "role": "ML Evaluation Engineer (contract)",
+        "when": "Feb 2026 – present",
+        "note": ""
+      },
+      {
+        "org": "Mercor",
+        "role": "CUDA Programming Expert (contract)",
+        "when": "May – Aug 2026",
+        "note": ""
+      },
+      {
+        "org": "Medulla",
+        "role": "Founding Machine Learning Researcher",
+        "when": "Jul 2023 – Jul 2025",
+        "note": "LLM-backed clinical assistant: containerised inference on AWS Lambda with Redis and websocket streaming under 300 ms; RAG with source attribution over a curated medical corpus; hired and led three engineers."
+      },
+      {
+        "org": "Fathom Solutions",
+        "role": "Deep Learning Engineer",
+        "when": "Dec 2021 – Jul 2023",
+        "note": "Road-damage detection mAP 0.30 → 0.60 for a national energy client; TensorFlow.js conversion and quantisation for sub-200 ms browser and edge inference; ingestion and labelling pipelines over geo-tagged imagery."
+      },
+      {
+        "org": "NVIDIA",
+        "role": "Deep Learning Intern",
+        "when": "Nov 2021 – Apr 2022",
+        "note": "10× faster training with DistributedDataParallel and mixed precision; a five-model WBF ensemble behind Triton at 152 ms; TB screening classifier at 0.97 AUC, Grad-CAM-checked; conversion scripts shipped as DLI course material; TA for 300+ learners."
+      }
+    ],
+    "education": [
+      {
+        "org": "Amity University Mumbai",
+        "role": "B.Tech, Computer Science & Engineering",
+        "when": "2024 – 2028 (expected)",
+        "note": "CGPA 9.19."
+      },
+      {
+        "org": "IIT Madras",
+        "role": "BS, Data Science & Applications (online)",
+        "when": "2028 (expected)",
+        "note": "CGPA 8.04."
+      }
+    ],
+    "achievements": [
+      {
+        "label": "Kaggle Competitions Master",
+        "note": "12 medals — 3 gold, 8 silver, 1 bronze — across computer vision, NLP, multi-agent RL and adversarial ML; peak global rank #38."
+      },
+      {
+        "label": "1st of 1,275 — VinBigData Chest X-ray Abnormalities Detection",
+        "note": "Team of four; consensus-fusion detector ensemble."
+      },
+      {
+        "label": "2nd of 874 — Bristol-Myers Squibb Molecular Translation",
+        "note": "Image-to-InChI sequence modelling."
+      },
+      {
+        "label": "Silver, solo — AI Village Capture the Flag @ DEFCON 31",
+        "note": "36th of 1,344 across the adversarial-ML challenge set."
+      },
+      {
+        "label": "Silver — Jigsaw Agile Community Rules Classification",
+        "note": "82nd of 2,445 (top 3.4%); from-scratch GRPO fine-tune of Qwen3-8B against a model-graded reward."
+      },
+      {
+        "label": "Top-2% finishes",
+        "note": "11th SIIM-FISABIO-RSNA COVID-19 · 15th Google Smartphone Decimeter · 16th RANZCR CLiP · 16th Human Protein Atlas Single Cell."
+      }
+    ],
+    "skills": {
+      "Languages": [
+        "Python",
+        "C++",
+        "CUDA",
+        "Rust",
+        "Bash",
+        "SQL"
+      ],
+      "ML systems": [
+        "PyTorch",
+        "HuggingFace",
+        "vLLM",
+        "Unsloth",
+        "TensorFlow",
+        "DDP & mixed precision",
+        "NVIDIA Triton",
+        "TorchServe",
+        "TensorFlow.js"
+      ],
+      "RL & simulation": [
+        "PPO & GRPO (from scratch)",
+        "Model-graded rewards",
+        "DQN",
+        "MCTS",
+        "Gymnasium",
+        "MuJoCo",
+        "Multi-agent self-play"
+      ],
+      "Evaluation & benchmarks": [
+        "SWE-bench",
+        "MLE-bench",
+        "Deterministic verifiers",
+        "Docker task harnesses",
+        "Held-out design",
+        "Contamination checks"
+      ],
+      "Engineering & cloud": [
+        "Docker",
+        "GitHub Actions",
+        "pytest",
+        "REST & websockets",
+        "PostgreSQL",
+        "Redis",
+        "AWS Lambda / S3 / SageMaker",
+        "GCP AI Platform"
+      ],
+      "Agents & retrieval": [
+        "LangGraph",
+        "RAG",
+        "FAISS",
+        "LoRA",
+        "RAGAS",
+        "Grad-CAM",
+        "Weights & Biases",
+        "MLflow"
+      ]
+    },
+    "calendly": "",
+    "fullName": "Mohammed Rizin V K",
+    "faq": [
+      {
+        "q": "Who is morizin?",
+        "a": "morizin is Mohammed Rizin V K, a machine learning engineer from Malappuram, Kerala, working from Mumbai, India. He is currently an ML Evaluation Engineer on contract at Shipd / DataCurve, worked with Mercor as a CUDA Programming Expert in 2026, and was previously Founding Machine Learning Researcher at Medulla, Deep Learning Engineer at Fathom Solutions and Deep Learning Intern at NVIDIA. He is completing a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both expected in 2028."
+      },
+      {
+        "q": "What is Mohammed Rizin known for?",
+        "a": "Competitive machine learning: Kaggle Competitions Master with 12 medals, including 1st place in VinBigData Chest X-ray Abnormalities Detection, 2nd in Bristol-Myers Squibb Molecular Translation, a solo silver at the DEFCON 31 AI Village Capture the Flag, and a silver in Jigsaw Agile Community Rules with a from-scratch GRPO fine-tune. In open source: movement-safety, a consent-first IMU research prototype in Rust with a MuJoCo simulation layer, and an MNIST trainer written in hand-written CUDA."
+      },
+      {
+        "q": "What does morizin work on now?",
+        "a": "Under contract at Shipd / DataCurve, whose work he does not describe publicly. In his own time: movement-safety, a consent-first IMU research pipeline in Rust with a MuJoCo simulation layer; GPU kernels written from scratch; and reinforcement learning from first principles — PPO and GRPO implementations, including training against model-graded rewards."
+      },
+      {
+        "q": "How can I work with morizin?",
+        "a": "He is open to machine learning engineering, evaluation and research roles, and to collaborations on problems worth solving. Describe what you want to build on the home page (“Plan with me”) or email itsmorizin@gmail.com. There is no public price list — scope and terms are agreed on a call."
+      },
+      {
+        "q": "Where can I find morizin online?",
+        "a": "GitHub and Kaggle as “morizin”, LinkedIn as “itsmorizin”, X as @MohammedRizin, Medium as @mrizin2013, and this site."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "movement-safety",
+      "number": "01",
+      "title": "Movement Safety",
+      "domain": "Sensing & Safety",
+      "modality": "IMU / Sensor ML",
+      "status": "Research prototype",
+      "featured": true,
+      "tags": [
+        "Rust",
+        "MuJoCo",
+        "IMU",
+        "Simulation",
+        "Negative results",
+        "Privacy by design"
+      ],
+      "summary": "Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding.",
+      "body": "The question is whether movement alone — no camera, no identity — carries enough signal to tell what kind of physical interaction is happening between people. Stage 1 is the capture rig: a local Rust server that any phone on the same network can open, an explicit consent step before a session may start, accelerometer and gyroscope streamed over WebSocket, and every session written as append-only JSONL with random device and session identifiers. Participants can stop or delete their own data at any time. The out-of-scope list is enforced in code, not written in a policy: no age, gender or race inference, no facial or biometric identification, no persistent identity or location tracking, no matching against records, no automatic reporting, no covert use.\n\nWith no real captures yet, the rest of the pipeline — windowing, per-window and pairwise features, a from-scratch logistic baseline, an experiment CLI that writes a reproducible record per run — is bootstrapped on two synthetic generators that emit the identical schema. One is parametric and hand-authored. The other is a MuJoCo scene in which each participant is a rigid free body and the second body's motion in a push or a bump comes entirely from the contact solver rather than a script — verified by timing the collision-driven response (2.62 s) against the applied force (2.14 s), with zero hand-coded correlation between them. That closes off an authored artefact a downstream model would otherwise learn instead of the phenomenon.\n\nThe two datasets give two different results: F1 0.80 on the parametric data, 0.56 on the MuJoCo data, with recall falling to 0.42. The per-scenario breakdown traces it to three brief transient events — a bump, a dropped phone, a fall — that real inertia and friction damp inside a 3-second feature window until the mean and variance features cannot see them. That is a finding about window sizing and event-aligned labelling, and it is published as one, rather than tuned past until the headline number looked better.",
+      "cover": "assets/movement-safety.webp",
+      "metrics": [
+        {
+          "value": "0.42",
+          "label": "recall on MuJoCo data — the negative result, published"
+        },
+        {
+          "value": "2 generators",
+          "label": "parametric and physics-derived, one schema"
+        },
+        {
+          "value": "0 identifiers",
+          "label": "names, numbers or precise location stored"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Aug 2026",
+          "what": "Stage 1 — consented multi-phone IMU capture, JSONL sessions, synthetic generator, tests"
+        },
+        {
+          "when": "Aug 2026",
+          "what": "Stages 2–5 — windowing, features, MuJoCo scenario suite, logistic baseline, experiment CLI; the recall collapse traced to transient events inside the window"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/movement-safety"
+        }
+      ],
+      "updated": "2026-08-14"
+    },
+    {
+      "id": "mnist-cuda",
+      "number": "02",
+      "title": "MNIST in hand-written CUDA",
+      "domain": "Systems & Compute",
+      "modality": "CUDA / Systems",
+      "status": "Prototype",
+      "featured": true,
+      "tags": [
+        "CUDA",
+        "C++",
+        "GPU kernels",
+        "From scratch"
+      ],
+      "summary": "A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN.",
+      "body": "The point was to own every byte between the data and the gradient. One generic 16×16 shared-memory tiled matmul kernel serves every forward and backward product through transpose flags rather than a kernel per op. Softmax and cross-entropy are fused in both directions — the backward pass writes probs − one_hot(label) directly, so there is no Jacobian to build. The full training set lives on the GPU for the whole run; each epoch reshuffles an index array on the host and uploads only the batch's indices, and a gather kernel pulls the rows. Optimiser is plain SGD with momentum.\n\nIt was written and reviewed on a machine without an NVIDIA GPU, so the repository is honest about that: build it on real hardware before trusting the numbers, and the README lists the places to check first if training misbehaves.",
+      "cover": "assets/desk.webp",
+      "metrics": [
+        {
+          "value": "784 → 256 → 10",
+          "label": "ReLU MLP, float32, row-major"
+        },
+        {
+          "value": "6 kernels",
+          "label": "matmul · bias+ReLU · softmax-CE fwd/bwd · gather · SGD"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Aug 2026",
+          "what": "Kernels, loader, training loop and Makefile (sm_70 – sm_90)"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/mnist_c"
+        }
+      ],
+      "updated": "2026-08-17"
+    },
+    {
+      "id": "crash-detector",
+      "number": "03",
+      "title": "Crash Detector",
+      "domain": "Vehicles & Safety",
+      "modality": "Multi-modal ML",
+      "status": "In progress",
+      "featured": false,
+      "tags": [
+        "Computer Vision",
+        "IMU",
+        "Control",
+        "PID",
+        "MPC"
+      ],
+      "summary": "Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact.",
+      "body": "Most crashes come with a short warning that a driver cannot use: low visibility, a vehicle already past the point of control, a roll about to happen. The system watches three things at once — a camera model on dashcam frames for obstacles and lane departure; a sensor model on accelerometer, gyroscope and speed for dynamics the camera cannot see, especially in the dark; and an actuator model on the steering, braking and throttle combination for control inputs that are themselves unsafe. When risk is high, a stabiliser takes over the actuators — PID to begin with, model-predictive control as the goal.\n\nThe repository holds the architecture, the metrics the project is judged by, and the roadmap. Several components are still marked to-do; it is a project in motion, not a result.",
+      "cover": "assets/edge-camera.webp",
+      "metrics": [
+        {
+          "value": "3 signals",
+          "label": "camera · IMU · actuators"
+        },
+        {
+          "value": "PID → MPC",
+          "label": "stabiliser roadmap"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Sep 2026",
+          "what": "Architecture, success metrics and roadmap published"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/crash-detector"
+        }
+      ],
+      "updated": "2026-09-07"
+    },
+    {
+      "id": "making-ai-beneficial",
+      "number": "04",
+      "title": "Upstage: Making AI Beneficial",
+      "domain": "Competitions",
+      "modality": "Sequence models",
+      "status": "Shipped",
+      "featured": false,
+      "tags": [
+        "Kaggle",
+        "Transformer",
+        "SAINT",
+        "Pseudo-labelling",
+        "Ensembling"
+      ],
+      "summary": "A 0.966 solution to Upstage's sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public.",
+      "body": "The task was sequential prediction over learner interactions. The solution is a SAINT-style transformer trained in seven variants — plain, pseudo-labelled, and one with Adam swapped in — then ensembled. Pseudo-labelling on the test set was the reliable lift; the ensemble did the rest. Training and inference are single shell commands, and every weight and submission file is in the repository so the score can be reproduced rather than believed.",
+      "cover": "assets/upstage.webp",
+      "metrics": [
+        {
+          "value": "0.966",
+          "label": "competition score"
+        },
+        {
+          "value": "7 variants",
+          "label": "ensembled"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Feb 2025",
+          "what": "Solution code and weights published"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/Making-AI-Beneficial"
+        }
+      ],
+      "updated": "2025-02-03"
+    },
+    {
+      "id": "tuberculosis-detection",
+      "number": "05",
+      "title": "Tuberculosis Detection",
+      "domain": "Medical Imaging",
+      "modality": "Computer Vision",
+      "status": "Prototype",
+      "featured": false,
+      "tags": [
+        "Computer Vision",
+        "Medical Imaging",
+        "TensorFlow",
+        "Streamlit"
+      ],
+      "summary": "Binary TB screening from chest X-rays with a Keras model behind a one-page Streamlit app — upload a radiograph, get a call. Research and education only.",
+      "body": "A deliberately small piece: a trained TensorFlow/Keras classifier, a Streamlit front end, and nothing between them. Drop in a chest X-ray and it returns TB-positive or TB-negative. It exists to make the model usable by someone who is not going to open a notebook, and it carries the disclaimer it should — this is a research tool, not a diagnosis.",
+      "cover": "assets/tb.webp",
+      "metrics": [
+        {
+          "value": "2 classes",
+          "label": "TB positive / negative"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Jan 2026",
+          "what": "Model, app and README published"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/tuberculosis-detection"
+        }
+      ],
+      "updated": "2026-01-25"
+    },
+    {
+      "id": "jigsaw-community-rules",
+      "number": "06",
+      "title": "Jigsaw: Agile Community Rules",
+      "domain": "NLP & LLM fine-tuning",
+      "modality": "Text",
+      "status": "Shipped",
+      "featured": true,
+      "tags": [
+        "Kaggle",
+        "GRPO",
+        "Qwen3",
+        "vLLM",
+        "DeBERTa",
+        "Ensembling"
+      ],
+      "summary": "Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit's rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3.",
+      "body": "Each subreddit has its own rules, so the task is not toxicity in general but whether this comment breaks that rule in that community — a judgement with no ground-truth scalar to optimise against. The pipeline is config-driven end to end: preprocessing, training, inference and ensembling reproduce from a single declarative spec rather than a stack of edited notebooks.\n\nThe piece I care most about is the GRPO run. Qwen3-8B was trained with a from-scratch GRPO implementation on Unsloth across multiple GPUs, with the reward computed by a pool of smaller judge models served on vLLM — a model-graded reward, which means a scoring function a policy can game rather than satisfy. Watching where it drifted was as instructive as the score.\n\nThe public/private leaderboard gap was the other problem. It was stabilised with cross-validated weighted ensembling over eight models — Qwen2.5-14B and 7B, Qwen3-14B and 8B, two triplet-trained encoders, DeBERTa-v3 and BGE embeddings — on column-averaged AUC.",
+      "cover": "assets/jigsaw.webp",
+      "metrics": [
+        {
+          "value": "82 / 2,445",
+          "label": "final rank — silver, top 3.4%"
+        },
+        {
+          "value": "8 models",
+          "label": "in the cross-validated ensemble"
+        },
+        {
+          "value": "GRPO",
+          "label": "from scratch, model-graded reward via vLLM judges"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "Sep 2025",
+          "what": "Config-driven pipeline; DeBERTa-v3 and BGE baselines"
+        },
+        {
+          "when": "Oct 2025",
+          "what": "GRPO fine-tune of Qwen3-8B with vLLM judge pool; weighted ensemble; silver on the private leaderboard"
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "href": "https://github.com/morizin/jigsaw"
+        },
+        {
+          "label": "Competition",
+          "href": "https://www.kaggle.com/competitions/jigsaw-agile-community-rules"
+        }
+      ],
+      "updated": "2025-12-23"
+    },
+    {
+      "id": "defcon31-ai-village-ctf",
+      "number": "07",
+      "title": "AI Village CTF @ DEFCON 31",
+      "domain": "Adversarial ML",
+      "modality": "Security",
+      "status": "Shipped",
+      "featured": false,
+      "tags": [
+        "Kaggle",
+        "Adversarial ML",
+        "Security",
+        "Solo",
+        "Model attacks"
+      ],
+      "summary": "A solo silver — 36th of 1,344 — across the AI Village capture-the-flag challenge set: attacks against deployed models and the guardrails wrapped around them.",
+      "body": "The challenge set covers the ways a deployed model fails under pressure: inputs crafted to flip a classifier, prompts that walk around a guardrail, models that leak what they were not supposed to know. Every flag is a case of satisfying a checker without solving the intended problem — which is exactly the failure an evaluation task has to be designed against, and the reason this competition turned out to be direct practice for the task-authoring work I do now.",
+      "cover": "assets/defcon31-ctf.webp",
+      "metrics": [
+        {
+          "value": "36 / 1,344",
+          "label": "solo — silver medal"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "2023",
+          "what": "Solo entry across the adversarial-ML challenge set"
+        }
+      ],
+      "links": [
+        {
+          "label": "Competition",
+          "href": "https://www.kaggle.com/competitions/ai-village-capture-the-flag-defcon31"
+        }
+      ],
+      "updated": "2023-11-10"
+    },
+    {
+      "id": "google-research-football",
+      "number": "08",
+      "title": "Google Research Football with Manchester City",
+      "domain": "Reinforcement learning",
+      "modality": "Multi-agent RL",
+      "status": "Shipped",
+      "featured": false,
+      "tags": [
+        "Kaggle",
+        "PPO",
+        "Self-play",
+        "Multi-agent",
+        "Reinforcement learning"
+      ],
+      "summary": "348th of 1,139 in a multi-agent self-play environment where the opponent pool exploits your agent's weaknesses instead of scoring it against a fixed test set — and where hand-authored controllers kept beating learned policies.",
+      "body": "Google Research Football scores an agent by playing it against everyone else's, so the evaluation itself is adversarial: any weakness a submitted policy has, the pool finds. I trained and evaluated a PPO policy in that setting.\n\nThe durable lesson was not the rank. At accessible compute budgets, hand-authored rule-based controllers consistently outperformed learned policies — a property of the environment's reward density and episode structure, not of the agents. Reading what an environment actually incentivises, before assuming a learned policy is the right instrument, has been a habit ever since.",
+      "cover": "assets/grf.webp",
+      "metrics": [
+        {
+          "value": "348 / 1,139",
+          "label": "final rank"
+        }
+      ],
+      "timeline": [
+        {
+          "when": "2021",
+          "what": "PPO policy trained and evaluated in multi-agent self-play"
+        }
+      ],
+      "links": [
+        {
+          "label": "Competition",
+          "href": "https://www.kaggle.com/competitions/google-football"
+        }
+      ],
+      "updated": "2021-01-05"
+    }
+  ],
+  "services": [
+    {
+      "id": "eval-design",
+      "name": "Evaluation & task design",
+      "price": "",
+      "tier": "core",
+      "description": "Coding tasks, verifiers and benchmark sets for training or evaluating agents — the golden solution, the specification a model must satisfy, and the deterministic check that decides whether it did, packaged to run in Docker.",
+      "includes": [
+        "Task authoring calibrated to current model failures",
+        "Deterministic verifiers and harnesses",
+        "Review of existing task sets for leakage and shortcut solutions"
+      ]
+    },
+    {
+      "id": "gpu-kernels",
+      "name": "CUDA & GPU performance",
+      "price": "",
+      "tier": "core",
+      "description": "Reference kernels, profiling and multi-GPU training speed-ups — from a slow training loop to a fused, measured implementation.",
+      "includes": [
+        "Kernel authoring and profiling",
+        "DistributedDataParallel and mixed-precision training",
+        "Triton / TensorRT serving"
+      ]
+    },
+    {
+      "id": "vision-to-prod",
+      "name": "Computer vision, prototype to production",
+      "price": "",
+      "tier": "core",
+      "description": "Detection and classification systems on real data, deployed where they actually have to run — server, browser or edge device.",
+      "includes": [
+        "Model and data pipeline on your data",
+        "Browser and edge conversion (TensorFlow.js, ONNX)",
+        "Monitoring and handover notes"
+      ]
+    },
+    {
+      "id": "rl-research",
+      "name": "RL & simulation research",
+      "price": "",
+      "tier": "retainer",
+      "description": "PPO and GRPO from scratch, model-graded rewards, MuJoCo or Gymnasium environments — and the evaluation that says whether the policy learned the task or the reward.",
+      "includes": [
+        "Environment and reward design",
+        "Training runs with reproducible experiment records",
+        "Written results, negative ones included"
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "id": "vinbigdata-1st-place-ensemble",
+      "title": "How we won VinBigData: an ensemble built to agree like radiologists",
+      "summary": "First place in the VinBigData Chest X-ray Abnormalities Detection competition — a three-tier detector ensemble fused with a consensus variant of Weighted Boxes Fusion, the metric quirk we found, four things that did not work, and the submission we should have picked.",
+      "date": "2026-09-17",
+      "originally": "2022-01-27",
+      "tags": [
+        "Kaggle",
+        "Computer Vision",
+        "Medical Imaging",
+        "Object Detection",
+        "Ensembling",
+        "WBF"
+      ],
+      "source": {
+        "label": "Team write-up on Kaggle",
+        "href": "https://www.kaggle.com/competitions/vinbigdata-chest-xray-abnormalities-detection/writeups/s-1st-place-solution"
+      },
+      "coauthors": [
+        "Sergio Manuel Papadakis",
+        "avsanjay",
+        "Fatih Öztürk"
+      ],
+      "body": "We finished first in VinBigData's Chest X-ray Abnormalities Detection with a private-leaderboard mAP of **0.314** — and, as every Kaggler will recognise, with a better submission (0.321) sitting unselected in the queue. This is the short version of how the winning ensemble worked, why it worked, and the four things we tried that did nothing. The [full team write-up is on Kaggle](https://www.kaggle.com/competitions/vinbigdata-chest-xray-abnormalities-detection/writeups/s-1st-place-solution).\n\n## The problem, briefly\n\nFourteen thoracic abnormalities to localise on chest radiographs, plus a fifteenth \"no finding\" class. The training labels came from several radiologists per image, and the test set was scored against their *consensus*. That last detail turned out to be the whole competition.\n\n## We merged late, and it cost us a validation scheme\n\nWe came together from separate teams, each with its own cross-validation split and its own best ensemble. There was no clean way to compare a model trained on my folds with one trained on Fatih's. So we did something that made us nervous and, in the end, paid off: we treated the public leaderboard as one more validation set, and we sorted every model into three tiers by how much we trusted its number.\n\n- **Fully validated** — Detectron2 ResNet-101, YOLOv5, EfficientDet-D2, all on a shared split.\n- **Partially validated** — a 5-fold YOLOv5.\n- **Public-LB only** — everything else: two more EffDet-D2s, three YOLOv5 variants (one with test-time augmentation), a 16-class YOLO, a re-anchored YOLO, Detectron2 ResNet-50, and two community YOLOv5 baselines we retrained.\n\nWe also retrained our strongest models on one common split and ensembled those. On its own that \"clean\" ensemble did not beat the messy one on the private board.\n\n## The trick: fuse boxes the way radiologists agree\n\nEvery detector produced its own boxes. We merged them with [Weighted Boxes Fusion](https://github.com/ZFTurbo/Weighted-Boxes-Fusion) — and then with a variant Sergio wrote that changed the competition for us.\n\nStandard WBF clusters boxes that overlap above an IoU threshold and gives the merged box the *mean* of their confidences. Our variant, **p_sum**, gives it the *sum*, normalised at the end. The intuition is the test set itself: the ground truth was radiologists agreeing. A box that five models drew should outrank a box that one model drew with high confidence — because that is exactly how the labels were made. Switching the final stage from mean to sum moved the public score from **0.319 to 0.331**.\n\n## The metric had no penalty for extra boxes\n\nChris Deotte [pointed this out](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/discussion/229637) and we confirmed it: adding low-confidence boxes could only help recall and never hurt precision at the operating points that mattered. We took a high-mAP model and appended every non-overlapping box from a high-recall model. The precision-recall curves kept their shape; their tails stretched from a recall ceiling of about 0.7 to past 0.8. We did not need it in the end — the ensemble's recall was already high — but it is the kind of thing worth knowing about a metric before you spend a week on architecture.\n\n## What did not work\n\n- **A 14-class multi-label classifier as a gate.** Train a sigmoid classifier on the whole image; drop any box whose class the classifier does not believe. It reduced the score. Swapping in PCAM attention pooling, which won CheXpert, did not rescue it.\n- **A crop classifier.** EfficientNet-B6 on the cropped box, asked \"is this really class X?\" It could not tell diseases apart from a crop alone; it needed the whole image.\n- **NIH ChestX-ray14 as pre-training.** Backbone trained as a multi-label classifier on NIH, transplanted into the detector, heads fine-tuned on the competition data. No measurable gain.\n- **One model per class.** Each with its own anchors, trained on class-X plus no-finding. Some classes improved, others did not, and the split it used did not match anyone else's, so it could not join the validated tier. A final ensemble with it scored the same as the one we selected.\n\n## The selection\n\nOur best local-CV model (around 0.47 mAP on CV) scored 0.300 public / 0.287 private. Our best public-LB submission scored **0.354 / 0.314**, and that is the one we chose. Had we given the public-LB-only tier less weight, we would have submitted **0.330 / 0.321**. We over-fitted the public board, knew we might be, and did it anyway because it was the only validation we shared. It still won. It is not the lesson I would teach.\n\n## Hardware\n\nBetween us: four Quadro GV100s, four GTX 1080s, four Titan Xs, an RTX 3080 and a Quadro RTX 6000. The solution reproduces on a single GPU — the fleet bought us breadth of experiments, not the result.\n\n## Credits\n\nSergio Manuel Papadakis (socom20), Mohammed Rizin V K, avsanjay, Fatih Öztürk (fatihozturk). Baselines from corochann, awsaf49 and nxhong93 were part of the ensemble. Cite the Kaggle write-up if you use this.\n\n*If you are working on medical imaging or any detection problem where the labels are a committee's opinion, the consensus-fusion idea travels. Say so on the home page and I will lay out how it would apply.*\n"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3856T8LSWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3856T8LSWV');
+  window.MZ_TRACK = function (name, params) { gtag('event', name, params || {}); };
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F6F1E9" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+<script>(function(){var r="morizin.theme",c={paper:"#F6F1E9",cadet:"#22324E"};function o(){try{return localStorage.getItem(r)}catch(e){return null}}function n(e){document.documentElement.setAttribute("data-theme",e);var a=document.querySelector('meta[name="theme-color"]');a&&a.setAttribute("content",c[e]||c.paper)}var t=o();t!=="paper"&&t!=="cadet"&&(t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"cadet":"paper"),n(t),window.MORIZIN_THEME={get:function(){return document.documentElement.getAttribute("data-theme")||"paper"},set:function(e){n(e);try{localStorage.setItem(r,e)}catch(a){}},toggle:function(){var e=this.get()==="cadet"?"paper":"cadet";return this.set(e),e}}})();</script>
+<link rel="stylesheet" href="../../css/site.css?v=3998bb48">
+<link rel="icon" href="../../assets/star.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<title>Jigsaw: Agile Community Rules — NLP &amp; LLM fine-tuning by morizin</title>
+<meta name="description" content="Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit&#39;s rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratc" />
+<link rel="canonical" href="https://morizin.github.io/projects/jigsaw-community-rules/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="morizin" />
+<meta property="og:title" content="Jigsaw: Agile Community Rules — morizin" />
+<meta property="og:description" content="Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit&#39;s rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratc" />
+<meta property="og:url" content="https://morizin.github.io/projects/jigsaw-community-rules/" />
+<meta property="og:image" content="https://morizin.github.io/assets/jigsaw.webp" />
+<meta property="article:modified_time" content="2025-12-23" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Jigsaw: Agile Community Rules — morizin" />
+<meta name="twitter:description" content="Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit&#39;s rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratc" />
+<meta name="twitter:image" content="https://morizin.github.io/assets/jigsaw.webp" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://morizin.github.io/projects/jigsaw-community-rules/#work","name":"Jigsaw: Agile Community Rules","headline":"Jigsaw: Agile Community Rules","description":"Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit's rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3.","url":"https://morizin.github.io/projects/jigsaw-community-rules/","image":"https://morizin.github.io/assets/jigsaw.webp","dateModified":"2025-12-23","keywords":"Kaggle, GRPO, Qwen3, vLLM, DeBERTa, Ensembling","genre":"NLP & LLM fine-tuning","creativeWorkStatus":"Shipped","author":{"@id":"https://morizin.github.io/#person"},"isPartOf":{"@id":"https://morizin.github.io/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"morizin","item":"https://morizin.github.io/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://morizin.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Jigsaw: Agile Community Rules","item":"https://morizin.github.io/projects/jigsaw-community-rules/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagehead">
+  <div class="wrap">
+    <a class="brandmark" href="../../index.html" aria-label="morizin — home">morizin</a>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="../../projects.html" aria-current="page">Projects</a></li>
+        <li><a href="../../writing.html">Writing</a></li>
+        <li><a href="../../about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="headcta">
+      <button class="theme" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap" id="detail"><article><div class="pd-hero"><div><span class="eyebrow">Project 06</span><h1>Jigsaw: Agile Community Rules</h1><div class="pd-meta"><span class="pill acc">06</span><span class="pill">NLP &amp; LLM fine-tuning</span><span class="pill">Text</span><span class="pill">Shipped</span></div></div><div class="pd-img"><img src="../../assets/jigsaw.webp" alt="Jigsaw: Agile Community Rules — lead image" width="960" height="720"></div><aside class="pd-aside"><p class="quote">“Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit&#39;s rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3.”</p><span class="mono">The approach</span><div class="skx"><svg width="120" height="100" viewBox="0 0 130 120" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M30 116 C22 84 20 60 30 40 c3-7 10-8 12 0 l4 20"/><path d="M46 60 l-4-32 c-1-8 8-10 10-2 l6 30"/><path d="M62 56 l0-36 c0-8 9-9 10-1 l3 35"/><path d="M78 58 l4-30 c1-8 10-8 10 1 l1 32"/><path d="M34 96 c26 14 56 12 74-8"/></svg></div></aside></div><div class="pd-body"><div><div class="body" style="font-size:16.5px;"><p>Each subreddit has its own rules, so the task is not toxicity in general but whether this comment breaks that rule in that community — a judgement with no ground-truth scalar to optimise against. The pipeline is config-driven end to end: preprocessing, training, inference and ensembling reproduce from a single declarative spec rather than a stack of edited notebooks.</p><p>The piece I care most about is the GRPO run. Qwen3-8B was trained with a from-scratch GRPO implementation on Unsloth across multiple GPUs, with the reward computed by a pool of smaller judge models served on vLLM — a model-graded reward, which means a scoring function a policy can game rather than satisfy. Watching where it drifted was as instructive as the score.</p><p>The public/private leaderboard gap was the other problem. It was stabilised with cross-validated weighted ensembling over eight models — Qwen2.5-14B and 7B, Qwen3-14B and 8B, two triplet-trained encoders, DeBERTa-v3 and BGE embeddings — on column-averaged AUC.</p></div><div class="subgraph" id="subgraph"><svg class="g-lines" aria-hidden="true" preserveAspectRatio="none"></svg><div class="subgrid"><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M9 12h6M9 16h4"/></svg></div><h2 class="h-3">Field notes</h2><span class="n">2</span><p>Dated entries from the work as it happened.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></div><h2 class="h-3">Metrics</h2><span class="n">3</span><p>What was measured, and what it came to.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.1 1.1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.1-1.1"/></svg></div><h2 class="h-3">Artefacts</h2><span class="n">2</span><p>Repositories, write-ups and demos.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9z"/><circle cx="8" cy="8" r="1.4"/></svg></div><h2 class="h-3">Skills</h2><span class="n">6</span><p>Kaggle · GRPO · Qwen3 · vLLM</p></div></div></div><div class="quickrow"><div class="quick"><div class="n">01</div><h2 class="h-3">82 / 2,445</h2><p>final rank — silver, top 3.4%</p></div><div class="quick"><div class="n">02</div><h2 class="h-3">8 models</h2><p>in the cross-validated ensemble</p></div><div class="quick"><div class="n">03</div><h2 class="h-3">GRPO</h2><p>from scratch, model-graded reward via vLLM judges</p></div></div></div><aside><div class="sidebox"><h3>Timeline</h3><div class="timeline"><div class="ev"><div class="when">Sep 2025</div><div class="what">Config-driven pipeline; DeBERTa-v3 and BGE baselines</div></div><div class="ev"><div class="when">Oct 2025</div><div class="what">GRPO fine-tune of Qwen3-8B with vLLM judge pool; weighted ensemble; silver on the private leaderboard</div></div></div></div><div class="sidebox" style="margin-top:16px;"><h3>Artefacts</h3><ul class="itemlist"><li><span class="nm">Repository</span><a href="https://github.com/morizin/jigsaw" rel="noopener">Open →</a></li><li><span class="nm">Competition</span><a href="https://www.kaggle.com/competitions/jigsaw-agile-community-rules" rel="noopener">Open →</a></li></ul></div><a class="btn ghost edit-only" style="margin-top:16px;width:100%;justify-content:center;" href="../../studio.html?edit=jigsaw-community-rules">Edit this project</a></aside></div></article></div>
+  <section class="wrap" id="related-sec" style="padding-block:30px 70px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin:0 0 20px;">
+      <div><span class="eyebrow">Connected nodes</span><h2 class="h-2" style="margin-top:12px;">Related projects</h2></div>
+      <a class="btn sm ghost" href="../../projects.html">All projects <span class="arw" aria-hidden="true">→</span></a>
+    </div>
+    <div class="listview"><article class="gcard g-card" data-id="movement-safety">
+  <a class="hit" href="../../projects/movement-safety/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/movement-safety.webp" alt="Movement Safety cover" loading="lazy" width="480" height="300"><span class="num">01</span></div>
+  <div class="bd"><div class="k"><i></i><span>Sensing &amp; Safety · Research prototype</span></div>
+    <h3><a href="../../projects/movement-safety/">Movement Safety</a></h3><p>Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding.</p>
+    <div class="subs"><span>Field notes <b>2</b></span><span>Metrics <b>3</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">Rust</span><span class="tag">MuJoCo</span><span class="tag">IMU</span></div></div>
+</article><article class="gcard g-card" data-id="mnist-cuda">
+  <a class="hit" href="../../projects/mnist-cuda/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/desk.webp" alt="MNIST in hand-written CUDA cover" loading="lazy" width="480" height="300"><span class="num">02</span></div>
+  <div class="bd"><div class="k"><i></i><span>Systems &amp; Compute · Prototype</span></div>
+    <h3><a href="../../projects/mnist-cuda/">MNIST in hand-written CUDA</a></h3><p>A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN.</p>
+    <div class="subs"><span>Field notes <b>1</b></span><span>Metrics <b>2</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">CUDA</span><span class="tag">C++</span><span class="tag">GPU kernels</span></div></div>
+</article><article class="gcard g-card" data-id="crash-detector">
+  <a class="hit" href="../../projects/crash-detector/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/edge-camera.webp" alt="Crash Detector cover" loading="lazy" width="480" height="300"><span class="num">03</span></div>
+  <div class="bd"><div class="k"><i></i><span>Vehicles &amp; Safety · In progress</span></div>
+    <h3><a href="../../projects/crash-detector/">Crash Detector</a></h3><p>Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact.</p>
+    <div class="subs"><span>Field notes <b>1</b></span><span>Metrics <b>2</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">Computer Vision</span><span class="tag">IMU</span><span class="tag">Control</span></div></div>
+</article></div>
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap">
+    <p class="q">“Systems for a more human future.”<span class="by">— morizin</span></p>
+    <div class="mega" aria-hidden="true">morizin</div>
+    <div class="cols">
+      <div><span class="mono">The practice</span><ul style="margin-top:12px;"><li><a href="../../index.html">Home</a></li><li><a href="../../projects.html">Projects</a></li><li><a href="../../writing.html">Writing</a></li><li><a href="../../about.html">About Mohammed</a></li><li class="edit-only"><a href="../../studio.html">Content studio</a></li></ul></div>
+      <div><span class="mono">Elsewhere</span><ul style="margin-top:12px;" id="foot-social"><li><a href="https://github.com/morizin" rel="noopener">GitHub</a></li><li><a href="https://www.kaggle.com/morizin" rel="noopener">Kaggle</a></li><li><a href="https://www.linkedin.com/in/itsmorizin" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/MohammedRizin" rel="noopener">X</a></li><li><a href="https://medium.com/@mrizin2013" rel="noopener">Medium</a></li></ul></div>
+      <div><span class="mono">Contact</span><ul style="margin-top:12px;"><li><a id="foot-email" href="mailto:itsmorizin@gmail.com">itsmorizin@gmail.com</a></li><li><span id="foot-loc" style="color:var(--muted);font-size:14.5px;">Mumbai, India · works remotely</span></li></ul></div>
+    </div>
+    <div class="meta"><span>© <span id="year">2026</span> morizin</span></div>
+  </div>
+</footer>
+<script src="../../js/site.js?v=2757b441"></script>
+<script>
+MZ.initNav();
+MZ.load().then(function (c) { MZ.fillFooter(c.profile); }).catch(function () {});
+var sg = document.getElementById('subgraph'); if (sg) MZ.mountSubgraph(sg);
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+# Mohammed Rizin (morizin)
+
+> Mohammed Rizin V K — Machine Learning Engineer. I build ML systems — and the tests that decide whether a model actually did the work. Based in Mumbai, India · works remotely.
+> Site: https://morizin.github.io/ · Contact: itsmorizin@gmail.com
+
+I'm a machine learning engineer. Right now I'm on contract with Shipd / DataCurve, and earlier this year with Mercor — work I can name but not describe. What I can talk about is on this site: the projects, the competition record, and the writing.
+
+Before that, four years of production engineering. Founding ML researcher at Medulla, where I built an LLM-backed clinical assistant with a retrieval-and-citation pipeline over a curated medical corpus and led a team of three through three pivots. Deep learning engineer at Fathom Solutions, doubling a road-damage detector's mAP and shipping it to the browser with TensorFlow.js. Deep learning intern at NVIDIA, where I learned distributed multi-GPU training, Docker and Triton-served inference, and wrote conversion scripts that shipped as Deep Learning Institute course material.
+
+I'm a Kaggle Competitions Master — 12 medals, most of them in code competitions where the organiser runs your submission against a hidden test set under a fixed compute budget — and I'm finishing two degrees at once: a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both due in 2028. I'm from Malappuram, Kerala, and work from Mumbai.
+
+## Projects
+- [Movement Safety](https://morizin.github.io/projects/movement-safety/): Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding. (Sensing & Safety · IMU / Sensor ML · Research prototype)
+- [MNIST in hand-written CUDA](https://morizin.github.io/projects/mnist-cuda/): A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN. (Systems & Compute · CUDA / Systems · Prototype)
+- [Crash Detector](https://morizin.github.io/projects/crash-detector/): Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact. (Vehicles & Safety · Multi-modal ML · In progress)
+- [Upstage: Making AI Beneficial](https://morizin.github.io/projects/making-ai-beneficial/): A 0.966 solution to Upstage's sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public. (Competitions · Sequence models · Shipped)
+- [Tuberculosis Detection](https://morizin.github.io/projects/tuberculosis-detection/): Binary TB screening from chest X-rays with a Keras model behind a one-page Streamlit app — upload a radiograph, get a call. Research and education only. (Medical Imaging · Computer Vision · Prototype)
+- [Jigsaw: Agile Community Rules](https://morizin.github.io/projects/jigsaw-community-rules/): Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit's rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3. (NLP & LLM fine-tuning · Text · Shipped)
+- [AI Village CTF @ DEFCON 31](https://morizin.github.io/projects/defcon31-ai-village-ctf/): A solo silver — 36th of 1,344 — across the AI Village capture-the-flag challenge set: attacks against deployed models and the guardrails wrapped around them. (Adversarial ML · Security · Shipped)
+- [Google Research Football with Manchester City](https://morizin.github.io/projects/google-research-football/): 348th of 1,139 in a multi-agent self-play environment where the opponent pool exploits your agent's weaknesses instead of scoring it against a fixed test set — and where hand-authored controllers kept beating learned policies. (Reinforcement learning · Multi-agent RL · Shipped)
+
+## Writing
+- [How we won VinBigData: an ensemble built to agree like radiologists](https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/) (2026-09-17): First place in the VinBigData Chest X-ray Abnormalities Detection competition — a three-tier detector ensemble fused with a consensus variant of Weighted Boxes Fusion, the metric quirk we found, four things that did not work, and the submission we should have picked.
+
+## Services
+- Evaluation & task design: Coding tasks, verifiers and benchmark sets for training or evaluating agents — the golden solution, the specification a model must satisfy, and the deterministic check that decides whether it did, packaged to run in Docker.
+- CUDA & GPU performance: Reference kernels, profiling and multi-GPU training speed-ups — from a slow training loop to a fused, measured implementation.
+- Computer vision, prototype to production: Detection and classification systems on real data, deployed where they actually have to run — server, browser or edge device.
+- RL & simulation research: PPO and GRPO from scratch, model-graded rewards, MuJoCo or Gymnasium environments — and the evaluation that says whether the policy learned the task or the reward.
+
+## Where to meet him
+- Nothing scheduled; Mumbai, India in person, email otherwise.
+
+## Facts
+- Kaggle Competitions Master: 12 medals — 3 gold, 8 silver, 1 bronze — across computer vision, NLP, multi-agent RL and adversarial ML; peak global rank #38.
+- 1st of 1,275 — VinBigData Chest X-ray Abnormalities Detection: Team of four; consensus-fusion detector ensemble.
+- 2nd of 874 — Bristol-Myers Squibb Molecular Translation: Image-to-InChI sequence modelling.
+- Silver, solo — AI Village Capture the Flag @ DEFCON 31: 36th of 1,344 across the adversarial-ML challenge set.
+- Silver — Jigsaw Agile Community Rules Classification: 82nd of 2,445 (top 3.4%); from-scratch GRPO fine-tune of Qwen3-8B against a model-graded reward.
+- Top-2% finishes: 11th SIIM-FISABIO-RSNA COVID-19 · 15th Google Smartphone Decimeter · 16th RANZCR CLiP · 16th Human Protein Atlas Single Cell.
+- Feb 2026 – present: ML Evaluation Engineer (contract) at Shipd / DataCurve
+- May – Aug 2026: CUDA Programming Expert (contract) at Mercor
+- Jul 2023 – Jul 2025: Founding Machine Learning Researcher at Medulla — LLM-backed clinical assistant: containerised inference on AWS Lambda with Redis and websocket streaming under 300 ms; RAG with source attribution over a curated medical corpus; hired and led three engineers.
+- Dec 2021 – Jul 2023: Deep Learning Engineer at Fathom Solutions — Road-damage detection mAP 0.30 → 0.60 for a national energy client; TensorFlow.js conversion and quantisation for sub-200 ms browser and edge inference; ingestion and labelling pipelines over geo-tagged imagery.
+- Nov 2021 – Apr 2022: Deep Learning Intern at NVIDIA — 10× faster training with DistributedDataParallel and mixed precision; a five-model WBF ensemble behind Triton at 152 ms; TB screening classifier at 0.97 AUC, Grad-CAM-checked; conversion scripts shipped as DLI course material; TA for 300+ learners.
+- 2024 – 2028 (expected): B.Tech, Computer Science & Engineering, Amity University Mumbai
+- 2028 (expected): BS, Data Science & Applications (online), IIT Madras
+
+## Elsewhere
+- GitHub: https://github.com/morizin
+- Kaggle: https://www.kaggle.com/morizin
+- LinkedIn: https://www.linkedin.com/in/itsmorizin
+- X: https://x.com/MohammedRizin
+- Medium: https://medium.com/@mrizin2013
+- Website: https://morizin.me
+
+## Optional
+- [Full text of every page](https://morizin.github.io/llms-full.txt)
+- [Sitemap](https://morizin.github.io/sitemap.xml)

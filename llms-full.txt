@@ -1,0 +1,273 @@
+# Mohammed Rizin (morizin)
+
+> Mohammed Rizin V K — Machine Learning Engineer. I build ML systems — and the tests that decide whether a model actually did the work. Based in Mumbai, India · works remotely.
+> Site: https://morizin.github.io/ · Contact: itsmorizin@gmail.com
+
+I'm a machine learning engineer. Right now I'm on contract with Shipd / DataCurve, and earlier this year with Mercor — work I can name but not describe. What I can talk about is on this site: the projects, the competition record, and the writing.
+
+Before that, four years of production engineering. Founding ML researcher at Medulla, where I built an LLM-backed clinical assistant with a retrieval-and-citation pipeline over a curated medical corpus and led a team of three through three pivots. Deep learning engineer at Fathom Solutions, doubling a road-damage detector's mAP and shipping it to the browser with TensorFlow.js. Deep learning intern at NVIDIA, where I learned distributed multi-GPU training, Docker and Triton-served inference, and wrote conversion scripts that shipped as Deep Learning Institute course material.
+
+I'm a Kaggle Competitions Master — 12 medals, most of them in code competitions where the organiser runs your submission against a hidden test set under a fixed compute budget — and I'm finishing two degrees at once: a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both due in 2028. I'm from Malappuram, Kerala, and work from Mumbai.
+
+## Projects
+- [Movement Safety](https://morizin.github.io/projects/movement-safety/): Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding. (Sensing & Safety · IMU / Sensor ML · Research prototype)
+- [MNIST in hand-written CUDA](https://morizin.github.io/projects/mnist-cuda/): A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN. (Systems & Compute · CUDA / Systems · Prototype)
+- [Crash Detector](https://morizin.github.io/projects/crash-detector/): Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact. (Vehicles & Safety · Multi-modal ML · In progress)
+- [Upstage: Making AI Beneficial](https://morizin.github.io/projects/making-ai-beneficial/): A 0.966 solution to Upstage's sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public. (Competitions · Sequence models · Shipped)
+- [Tuberculosis Detection](https://morizin.github.io/projects/tuberculosis-detection/): Binary TB screening from chest X-rays with a Keras model behind a one-page Streamlit app — upload a radiograph, get a call. Research and education only. (Medical Imaging · Computer Vision · Prototype)
+- [Jigsaw: Agile Community Rules](https://morizin.github.io/projects/jigsaw-community-rules/): Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit's rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3. (NLP & LLM fine-tuning · Text · Shipped)
+- [AI Village CTF @ DEFCON 31](https://morizin.github.io/projects/defcon31-ai-village-ctf/): A solo silver — 36th of 1,344 — across the AI Village capture-the-flag challenge set: attacks against deployed models and the guardrails wrapped around them. (Adversarial ML · Security · Shipped)
+- [Google Research Football with Manchester City](https://morizin.github.io/projects/google-research-football/): 348th of 1,139 in a multi-agent self-play environment where the opponent pool exploits your agent's weaknesses instead of scoring it against a fixed test set — and where hand-authored controllers kept beating learned policies. (Reinforcement learning · Multi-agent RL · Shipped)
+
+## Writing
+- [How we won VinBigData: an ensemble built to agree like radiologists](https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/) (2026-09-17): First place in the VinBigData Chest X-ray Abnormalities Detection competition — a three-tier detector ensemble fused with a consensus variant of Weighted Boxes Fusion, the metric quirk we found, four things that did not work, and the submission we should have picked.
+
+## Services
+- Evaluation & task design: Coding tasks, verifiers and benchmark sets for training or evaluating agents — the golden solution, the specification a model must satisfy, and the deterministic check that decides whether it did, packaged to run in Docker.
+- CUDA & GPU performance: Reference kernels, profiling and multi-GPU training speed-ups — from a slow training loop to a fused, measured implementation.
+- Computer vision, prototype to production: Detection and classification systems on real data, deployed where they actually have to run — server, browser or edge device.
+- RL & simulation research: PPO and GRPO from scratch, model-graded rewards, MuJoCo or Gymnasium environments — and the evaluation that says whether the policy learned the task or the reward.
+
+## Where to meet him
+- Nothing scheduled; Mumbai, India in person, email otherwise.
+
+## Facts
+- Kaggle Competitions Master: 12 medals — 3 gold, 8 silver, 1 bronze — across computer vision, NLP, multi-agent RL and adversarial ML; peak global rank #38.
+- 1st of 1,275 — VinBigData Chest X-ray Abnormalities Detection: Team of four; consensus-fusion detector ensemble.
+- 2nd of 874 — Bristol-Myers Squibb Molecular Translation: Image-to-InChI sequence modelling.
+- Silver, solo — AI Village Capture the Flag @ DEFCON 31: 36th of 1,344 across the adversarial-ML challenge set.
+- Silver — Jigsaw Agile Community Rules Classification: 82nd of 2,445 (top 3.4%); from-scratch GRPO fine-tune of Qwen3-8B against a model-graded reward.
+- Top-2% finishes: 11th SIIM-FISABIO-RSNA COVID-19 · 15th Google Smartphone Decimeter · 16th RANZCR CLiP · 16th Human Protein Atlas Single Cell.
+- Feb 2026 – present: ML Evaluation Engineer (contract) at Shipd / DataCurve
+- May – Aug 2026: CUDA Programming Expert (contract) at Mercor
+- Jul 2023 – Jul 2025: Founding Machine Learning Researcher at Medulla — LLM-backed clinical assistant: containerised inference on AWS Lambda with Redis and websocket streaming under 300 ms; RAG with source attribution over a curated medical corpus; hired and led three engineers.
+- Dec 2021 – Jul 2023: Deep Learning Engineer at Fathom Solutions — Road-damage detection mAP 0.30 → 0.60 for a national energy client; TensorFlow.js conversion and quantisation for sub-200 ms browser and edge inference; ingestion and labelling pipelines over geo-tagged imagery.
+- Nov 2021 – Apr 2022: Deep Learning Intern at NVIDIA — 10× faster training with DistributedDataParallel and mixed precision; a five-model WBF ensemble behind Triton at 152 ms; TB screening classifier at 0.97 AUC, Grad-CAM-checked; conversion scripts shipped as DLI course material; TA for 300+ learners.
+- 2024 – 2028 (expected): B.Tech, Computer Science & Engineering, Amity University Mumbai
+- 2028 (expected): BS, Data Science & Applications (online), IIT Madras
+
+## Elsewhere
+- GitHub: https://github.com/morizin
+- Kaggle: https://www.kaggle.com/morizin
+- LinkedIn: https://www.linkedin.com/in/itsmorizin
+- X: https://x.com/MohammedRizin
+- Medium: https://medium.com/@mrizin2013
+- Website: https://morizin.me
+
+## Optional
+- [Full text of every page](https://morizin.github.io/llms-full.txt)
+- [Sitemap](https://morizin.github.io/sitemap.xml)
+
+---
+
+# About Mohammed Rizin
+I'm a machine learning engineer. Right now I'm on contract with Shipd / DataCurve, and earlier this year with Mercor — work I can name but not describe. What I can talk about is on this site: the projects, the competition record, and the writing.
+
+Before that, four years of production engineering. Founding ML researcher at Medulla, where I built an LLM-backed clinical assistant with a retrieval-and-citation pipeline over a curated medical corpus and led a team of three through three pivots. Deep learning engineer at Fathom Solutions, doubling a road-damage detector's mAP and shipping it to the browser with TensorFlow.js. Deep learning intern at NVIDIA, where I learned distributed multi-GPU training, Docker and Triton-served inference, and wrote conversion scripts that shipped as Deep Learning Institute course material.
+
+I'm a Kaggle Competitions Master — 12 medals, most of them in code competitions where the organiser runs your submission against a hidden test set under a fixed compute budget — and I'm finishing two degrees at once: a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both due in 2028. I'm from Malappuram, Kerala, and work from Mumbai.
+
+## Skills
+- Languages: Python, C++, CUDA, Rust, Bash, SQL
+- ML systems: PyTorch, HuggingFace, vLLM, Unsloth, TensorFlow, DDP & mixed precision, NVIDIA Triton, TorchServe, TensorFlow.js
+- RL & simulation: PPO & GRPO (from scratch), Model-graded rewards, DQN, MCTS, Gymnasium, MuJoCo, Multi-agent self-play
+- Evaluation & benchmarks: SWE-bench, MLE-bench, Deterministic verifiers, Docker task harnesses, Held-out design, Contamination checks
+- Engineering & cloud: Docker, GitHub Actions, pytest, REST & websockets, PostgreSQL, Redis, AWS Lambda / S3 / SageMaker, GCP AI Platform
+- Agents & retrieval: LangGraph, RAG, FAISS, LoRA, RAGAS, Grad-CAM, Weights & Biases, MLflow
+
+## FAQ
+### Who is morizin?
+morizin is Mohammed Rizin V K, a machine learning engineer from Malappuram, Kerala, working from Mumbai, India. He is currently an ML Evaluation Engineer on contract at Shipd / DataCurve, worked with Mercor as a CUDA Programming Expert in 2026, and was previously Founding Machine Learning Researcher at Medulla, Deep Learning Engineer at Fathom Solutions and Deep Learning Intern at NVIDIA. He is completing a B.Tech in Computer Science at Amity University Mumbai and the online BS in Data Science at IIT Madras, both expected in 2028.
+
+### What is Mohammed Rizin known for?
+Competitive machine learning: Kaggle Competitions Master with 12 medals, including 1st place in VinBigData Chest X-ray Abnormalities Detection, 2nd in Bristol-Myers Squibb Molecular Translation, a solo silver at the DEFCON 31 AI Village Capture the Flag, and a silver in Jigsaw Agile Community Rules with a from-scratch GRPO fine-tune. In open source: movement-safety, a consent-first IMU research prototype in Rust with a MuJoCo simulation layer, and an MNIST trainer written in hand-written CUDA.
+
+### What does morizin work on now?
+Under contract at Shipd / DataCurve, whose work he does not describe publicly. In his own time: movement-safety, a consent-first IMU research pipeline in Rust with a MuJoCo simulation layer; GPU kernels written from scratch; and reinforcement learning from first principles — PPO and GRPO implementations, including training against model-graded rewards.
+
+### How can I work with morizin?
+He is open to machine learning engineering, evaluation and research roles, and to collaborations on problems worth solving. Describe what you want to build on the home page (“Plan with me”) or email itsmorizin@gmail.com. There is no public price list — scope and terms are agreed on a call.
+
+### Where can I find morizin online?
+GitHub and Kaggle as “morizin”, LinkedIn as “itsmorizin”, X as @MohammedRizin, Medium as @mrizin2013, and this site.
+
+---
+
+# How we won VinBigData: an ensemble built to agree like radiologists
+https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/ · 2026-09-17 · Kaggle, Computer Vision, Medical Imaging, Object Detection, Ensembling, WBF
+
+We finished first in VinBigData's Chest X-ray Abnormalities Detection with a private-leaderboard mAP of **0.314** — and, as every Kaggler will recognise, with a better submission (0.321) sitting unselected in the queue. This is the short version of how the winning ensemble worked, why it worked, and the four things we tried that did nothing. The [full team write-up is on Kaggle](https://www.kaggle.com/competitions/vinbigdata-chest-xray-abnormalities-detection/writeups/s-1st-place-solution).
+
+## The problem, briefly
+
+Fourteen thoracic abnormalities to localise on chest radiographs, plus a fifteenth "no finding" class. The training labels came from several radiologists per image, and the test set was scored against their *consensus*. That last detail turned out to be the whole competition.
+
+## We merged late, and it cost us a validation scheme
+
+We came together from separate teams, each with its own cross-validation split and its own best ensemble. There was no clean way to compare a model trained on my folds with one trained on Fatih's. So we did something that made us nervous and, in the end, paid off: we treated the public leaderboard as one more validation set, and we sorted every model into three tiers by how much we trusted its number.
+
+- **Fully validated** — Detectron2 ResNet-101, YOLOv5, EfficientDet-D2, all on a shared split.
+- **Partially validated** — a 5-fold YOLOv5.
+- **Public-LB only** — everything else: two more EffDet-D2s, three YOLOv5 variants (one with test-time augmentation), a 16-class YOLO, a re-anchored YOLO, Detectron2 ResNet-50, and two community YOLOv5 baselines we retrained.
+
+We also retrained our strongest models on one common split and ensembled those. On its own that "clean" ensemble did not beat the messy one on the private board.
+
+## The trick: fuse boxes the way radiologists agree
+
+Every detector produced its own boxes. We merged them with [Weighted Boxes Fusion](https://github.com/ZFTurbo/Weighted-Boxes-Fusion) — and then with a variant Sergio wrote that changed the competition for us.
+
+Standard WBF clusters boxes that overlap above an IoU threshold and gives the merged box the *mean* of their confidences. Our variant, **p_sum**, gives it the *sum*, normalised at the end. The intuition is the test set itself: the ground truth was radiologists agreeing. A box that five models drew should outrank a box that one model drew with high confidence — because that is exactly how the labels were made. Switching the final stage from mean to sum moved the public score from **0.319 to 0.331**.
+
+## The metric had no penalty for extra boxes
+
+Chris Deotte [pointed this out](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/discussion/229637) and we confirmed it: adding low-confidence boxes could only help recall and never hurt precision at the operating points that mattered. We took a high-mAP model and appended every non-overlapping box from a high-recall model. The precision-recall curves kept their shape; their tails stretched from a recall ceiling of about 0.7 to past 0.8. We did not need it in the end — the ensemble's recall was already high — but it is the kind of thing worth knowing about a metric before you spend a week on architecture.
+
+## What did not work
+
+- **A 14-class multi-label classifier as a gate.** Train a sigmoid classifier on the whole image; drop any box whose class the classifier does not believe. It reduced the score. Swapping in PCAM attention pooling, which won CheXpert, did not rescue it.
+- **A crop classifier.** EfficientNet-B6 on the cropped box, asked "is this really class X?" It could not tell diseases apart from a crop alone; it needed the whole image.
+- **NIH ChestX-ray14 as pre-training.** Backbone trained as a multi-label classifier on NIH, transplanted into the detector, heads fine-tuned on the competition data. No measurable gain.
+- **One model per class.** Each with its own anchors, trained on class-X plus no-finding. Some classes improved, others did not, and the split it used did not match anyone else's, so it could not join the validated tier. A final ensemble with it scored the same as the one we selected.
+
+## The selection
+
+Our best local-CV model (around 0.47 mAP on CV) scored 0.300 public / 0.287 private. Our best public-LB submission scored **0.354 / 0.314**, and that is the one we chose. Had we given the public-LB-only tier less weight, we would have submitted **0.330 / 0.321**. We over-fitted the public board, knew we might be, and did it anyway because it was the only validation we shared. It still won. It is not the lesson I would teach.
+
+## Hardware
+
+Between us: four Quadro GV100s, four GTX 1080s, four Titan Xs, an RTX 3080 and a Quadro RTX 6000. The solution reproduces on a single GPU — the fleet bought us breadth of experiments, not the result.
+
+## Credits
+
+Sergio Manuel Papadakis (socom20), Mohammed Rizin V K, avsanjay, Fatih Öztürk (fatihozturk). Baselines from corochann, awsaf49 and nxhong93 were part of the ensemble. Cite the Kaggle write-up if you use this.
+
+*If you are working on medical imaging or any detection problem where the labels are a committee's opinion, the consensus-fusion idea travels. Say so on the home page and I will lay out how it would apply.*
+
+
+
+---
+
+# Movement Safety
+https://morizin.github.io/projects/movement-safety/
+Sensing & Safety · IMU / Sensor ML · Research prototype · Tags: Rust, MuJoCo, IMU, Simulation, Negative results, Privacy by design
+
+Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding.
+
+The question is whether movement alone — no camera, no identity — carries enough signal to tell what kind of physical interaction is happening between people. Stage 1 is the capture rig: a local Rust server that any phone on the same network can open, an explicit consent step before a session may start, accelerometer and gyroscope streamed over WebSocket, and every session written as append-only JSONL with random device and session identifiers. Participants can stop or delete their own data at any time. The out-of-scope list is enforced in code, not written in a policy: no age, gender or race inference, no facial or biometric identification, no persistent identity or location tracking, no matching against records, no automatic reporting, no covert use.
+
+With no real captures yet, the rest of the pipeline — windowing, per-window and pairwise features, a from-scratch logistic baseline, an experiment CLI that writes a reproducible record per run — is bootstrapped on two synthetic generators that emit the identical schema. One is parametric and hand-authored. The other is a MuJoCo scene in which each participant is a rigid free body and the second body's motion in a push or a bump comes entirely from the contact solver rather than a script — verified by timing the collision-driven response (2.62 s) against the applied force (2.14 s), with zero hand-coded correlation between them. That closes off an authored artefact a downstream model would otherwise learn instead of the phenomenon.
+
+The two datasets give two different results: F1 0.80 on the parametric data, 0.56 on the MuJoCo data, with recall falling to 0.42. The per-scenario breakdown traces it to three brief transient events — a bump, a dropped phone, a fall — that real inertia and friction damp inside a 3-second feature window until the mean and variance features cannot see them. That is a finding about window sizing and event-aligned labelling, and it is published as one, rather than tuned past until the headline number looked better.
+
+Metrics: 0.42 (recall on MuJoCo data — the negative result, published); 2 generators (parametric and physics-derived, one schema); 0 identifiers (names, numbers or precise location stored)
+Timeline: Aug 2026 — Stage 1 — consented multi-phone IMU capture, JSONL sessions, synthetic generator, tests; Aug 2026 — Stages 2–5 — windowing, features, MuJoCo scenario suite, logistic baseline, experiment CLI; the recall collapse traced to transient events inside the window
+Links: Repository https://github.com/morizin/movement-safety
+
+---
+
+# MNIST in hand-written CUDA
+https://morizin.github.io/projects/mnist-cuda/
+Systems & Compute · CUDA / Systems · Prototype · Tags: CUDA, C++, GPU kernels, From scratch
+
+A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN.
+
+The point was to own every byte between the data and the gradient. One generic 16×16 shared-memory tiled matmul kernel serves every forward and backward product through transpose flags rather than a kernel per op. Softmax and cross-entropy are fused in both directions — the backward pass writes probs − one_hot(label) directly, so there is no Jacobian to build. The full training set lives on the GPU for the whole run; each epoch reshuffles an index array on the host and uploads only the batch's indices, and a gather kernel pulls the rows. Optimiser is plain SGD with momentum.
+
+It was written and reviewed on a machine without an NVIDIA GPU, so the repository is honest about that: build it on real hardware before trusting the numbers, and the README lists the places to check first if training misbehaves.
+
+Metrics: 784 → 256 → 10 (ReLU MLP, float32, row-major); 6 kernels (matmul · bias+ReLU · softmax-CE fwd/bwd · gather · SGD)
+Timeline: Aug 2026 — Kernels, loader, training loop and Makefile (sm_70 – sm_90)
+Links: Repository https://github.com/morizin/mnist_c
+
+---
+
+# Crash Detector
+https://morizin.github.io/projects/crash-detector/
+Vehicles & Safety · Multi-modal ML · In progress · Tags: Computer Vision, IMU, Control, PID, MPC
+
+Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact.
+
+Most crashes come with a short warning that a driver cannot use: low visibility, a vehicle already past the point of control, a roll about to happen. The system watches three things at once — a camera model on dashcam frames for obstacles and lane departure; a sensor model on accelerometer, gyroscope and speed for dynamics the camera cannot see, especially in the dark; and an actuator model on the steering, braking and throttle combination for control inputs that are themselves unsafe. When risk is high, a stabiliser takes over the actuators — PID to begin with, model-predictive control as the goal.
+
+The repository holds the architecture, the metrics the project is judged by, and the roadmap. Several components are still marked to-do; it is a project in motion, not a result.
+
+Metrics: 3 signals (camera · IMU · actuators); PID → MPC (stabiliser roadmap)
+Timeline: Sep 2026 — Architecture, success metrics and roadmap published
+Links: Repository https://github.com/morizin/crash-detector
+
+---
+
+# Upstage: Making AI Beneficial
+https://morizin.github.io/projects/making-ai-beneficial/
+Competitions · Sequence models · Shipped · Tags: Kaggle, Transformer, SAINT, Pseudo-labelling, Ensembling
+
+A 0.966 solution to Upstage's sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public.
+
+The task was sequential prediction over learner interactions. The solution is a SAINT-style transformer trained in seven variants — plain, pseudo-labelled, and one with Adam swapped in — then ensembled. Pseudo-labelling on the test set was the reliable lift; the ensemble did the rest. Training and inference are single shell commands, and every weight and submission file is in the repository so the score can be reproduced rather than believed.
+
+Metrics: 0.966 (competition score); 7 variants (ensembled)
+Timeline: Feb 2025 — Solution code and weights published
+Links: Repository https://github.com/morizin/Making-AI-Beneficial
+
+---
+
+# Tuberculosis Detection
+https://morizin.github.io/projects/tuberculosis-detection/
+Medical Imaging · Computer Vision · Prototype · Tags: Computer Vision, Medical Imaging, TensorFlow, Streamlit
+
+Binary TB screening from chest X-rays with a Keras model behind a one-page Streamlit app — upload a radiograph, get a call. Research and education only.
+
+A deliberately small piece: a trained TensorFlow/Keras classifier, a Streamlit front end, and nothing between them. Drop in a chest X-ray and it returns TB-positive or TB-negative. It exists to make the model usable by someone who is not going to open a notebook, and it carries the disclaimer it should — this is a research tool, not a diagnosis.
+
+Metrics: 2 classes (TB positive / negative)
+Timeline: Jan 2026 — Model, app and README published
+Links: Repository https://github.com/morizin/tuberculosis-detection
+
+---
+
+# Jigsaw: Agile Community Rules
+https://morizin.github.io/projects/jigsaw-community-rules/
+NLP & LLM fine-tuning · Text · Shipped · Tags: Kaggle, GRPO, Qwen3, vLLM, DeBERTa, Ensembling
+
+Silver medal — 82nd of 2,445 — predicting whether a Reddit comment breaks a subreddit's rule: a config-driven pipeline, Qwen3-8B fine-tuned with a from-scratch GRPO implementation against a model-graded reward, and a cross-validated ensemble with BGE and DeBERTa-v3.
+
+Each subreddit has its own rules, so the task is not toxicity in general but whether this comment breaks that rule in that community — a judgement with no ground-truth scalar to optimise against. The pipeline is config-driven end to end: preprocessing, training, inference and ensembling reproduce from a single declarative spec rather than a stack of edited notebooks.
+
+The piece I care most about is the GRPO run. Qwen3-8B was trained with a from-scratch GRPO implementation on Unsloth across multiple GPUs, with the reward computed by a pool of smaller judge models served on vLLM — a model-graded reward, which means a scoring function a policy can game rather than satisfy. Watching where it drifted was as instructive as the score.
+
+The public/private leaderboard gap was the other problem. It was stabilised with cross-validated weighted ensembling over eight models — Qwen2.5-14B and 7B, Qwen3-14B and 8B, two triplet-trained encoders, DeBERTa-v3 and BGE embeddings — on column-averaged AUC.
+
+Metrics: 82 / 2,445 (final rank — silver, top 3.4%); 8 models (in the cross-validated ensemble); GRPO (from scratch, model-graded reward via vLLM judges)
+Timeline: Sep 2025 — Config-driven pipeline; DeBERTa-v3 and BGE baselines; Oct 2025 — GRPO fine-tune of Qwen3-8B with vLLM judge pool; weighted ensemble; silver on the private leaderboard
+Links: Repository https://github.com/morizin/jigsaw; Competition https://www.kaggle.com/competitions/jigsaw-agile-community-rules
+
+---
+
+# AI Village CTF @ DEFCON 31
+https://morizin.github.io/projects/defcon31-ai-village-ctf/
+Adversarial ML · Security · Shipped · Tags: Kaggle, Adversarial ML, Security, Solo, Model attacks
+
+A solo silver — 36th of 1,344 — across the AI Village capture-the-flag challenge set: attacks against deployed models and the guardrails wrapped around them.
+
+The challenge set covers the ways a deployed model fails under pressure: inputs crafted to flip a classifier, prompts that walk around a guardrail, models that leak what they were not supposed to know. Every flag is a case of satisfying a checker without solving the intended problem — which is exactly the failure an evaluation task has to be designed against, and the reason this competition turned out to be direct practice for the task-authoring work I do now.
+
+Metrics: 36 / 1,344 (solo — silver medal)
+Timeline: 2023 — Solo entry across the adversarial-ML challenge set
+Links: Competition https://www.kaggle.com/competitions/ai-village-capture-the-flag-defcon31
+
+---
+
+# Google Research Football with Manchester City
+https://morizin.github.io/projects/google-research-football/
+Reinforcement learning · Multi-agent RL · Shipped · Tags: Kaggle, PPO, Self-play, Multi-agent, Reinforcement learning
+
+348th of 1,139 in a multi-agent self-play environment where the opponent pool exploits your agent's weaknesses instead of scoring it against a fixed test set — and where hand-authored controllers kept beating learned policies.
+
+Google Research Football scores an agent by playing it against everyone else's, so the evaluation itself is adversarial: any weakness a submitted policy has, the pool finds. I trained and evaluated a PPO policy in that setting.
+
+The durable lesson was not the rank. At accessible compute budgets, hand-authored rule-based controllers consistently outperformed learned policies — a property of the environment's reward density and episode structure, not of the agents. Reading what an environment actually incentivises, before assuming a learned policy is the right instrument, has been a habit ever since.
+
+Metrics: 348 / 1,139 (final rank)
+Timeline: 2021 — PPO policy trained and evaluated in multi-agent self-play
+Links: Competition https://www.kaggle.com/competitions/google-football
+

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3856T8LSWV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3856T8LSWV');
+  window.MZ_TRACK = function (name, params) { gtag('event', name, params || {}); };
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F6F1E9" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+<script>(function(){var r="morizin.theme",c={paper:"#F6F1E9",cadet:"#22324E"};function o(){try{return localStorage.getItem(r)}catch(e){return null}}function n(e){document.documentElement.setAttribute("data-theme",e);var a=document.querySelector('meta[name="theme-color"]');a&&a.setAttribute("content",c[e]||c.paper)}var t=o();t!=="paper"&&t!=="cadet"&&(t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"cadet":"paper"),n(t),window.MORIZIN_THEME={get:function(){return document.documentElement.getAttribute("data-theme")||"paper"},set:function(e){n(e);try{localStorage.setItem(r,e)}catch(a){}},toggle:function(){var e=this.get()==="cadet"?"paper":"cadet";return this.set(e),e}}})();</script>
+<link rel="stylesheet" href="../../css/site.css?v=3998bb48">
+<link rel="icon" href="../../assets/star.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<title>MNIST in hand-written CUDA — Systems &amp; Compute by morizin</title>
+<meta name="description" content="A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by h" />
+<link rel="canonical" href="https://morizin.github.io/projects/mnist-cuda/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="morizin" />
+<meta property="og:title" content="MNIST in hand-written CUDA — morizin" />
+<meta property="og:description" content="A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by h" />
+<meta property="og:url" content="https://morizin.github.io/projects/mnist-cuda/" />
+<meta property="og:image" content="https://morizin.github.io/assets/desk.webp" />
+<meta property="article:modified_time" content="2026-08-17" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MNIST in hand-written CUDA — morizin" />
+<meta name="twitter:description" content="A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by h" />
+<meta name="twitter:image" content="https://morizin.github.io/assets/desk.webp" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://morizin.github.io/projects/mnist-cuda/#work","name":"MNIST in hand-written CUDA","headline":"MNIST in hand-written CUDA","description":"A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN.","url":"https://morizin.github.io/projects/mnist-cuda/","image":"https://morizin.github.io/assets/desk.webp","dateModified":"2026-08-17","keywords":"CUDA, C++, GPU kernels, From scratch","genre":"Systems & Compute","creativeWorkStatus":"Prototype","author":{"@id":"https://morizin.github.io/#person"},"isPartOf":{"@id":"https://morizin.github.io/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"morizin","item":"https://morizin.github.io/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://morizin.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"MNIST in hand-written CUDA","item":"https://morizin.github.io/projects/mnist-cuda/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagehead">
+  <div class="wrap">
+    <a class="brandmark" href="../../index.html" aria-label="morizin — home">morizin</a>
+    <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="../../projects.html" aria-current="page">Projects</a></li>
+        <li><a href="../../writing.html">Writing</a></li>
+        <li><a href="../../about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="headcta">
+      <button class="theme" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap" id="detail"><article><div class="pd-hero"><div><span class="eyebrow">Project 02</span><h1>MNIST in hand-written CUDA</h1><div class="pd-meta"><span class="pill acc">02</span><span class="pill">Systems &amp; Compute</span><span class="pill">CUDA / Systems</span><span class="pill">Prototype</span></div></div><div class="pd-img"><img src="../../assets/desk.webp" alt="MNIST in hand-written CUDA — lead image" width="960" height="720"></div><aside class="pd-aside"><p class="quote">“A two-layer MLP trained on MNIST where every kernel — tiled matmul, fused bias+ReLU, fused softmax cross-entropy, batch gather, SGD-momentum — is written by hand. No cuBLAS, no cuDNN.”</p><span class="mono">The approach</span><div class="skx"><svg width="120" height="100" viewBox="0 0 130 120" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M30 116 C22 84 20 60 30 40 c3-7 10-8 12 0 l4 20"/><path d="M46 60 l-4-32 c-1-8 8-10 10-2 l6 30"/><path d="M62 56 l0-36 c0-8 9-9 10-1 l3 35"/><path d="M78 58 l4-30 c1-8 10-8 10 1 l1 32"/><path d="M34 96 c26 14 56 12 74-8"/></svg></div></aside></div><div class="pd-body"><div><div class="body" style="font-size:16.5px;"><p>The point was to own every byte between the data and the gradient. One generic 16×16 shared-memory tiled matmul kernel serves every forward and backward product through transpose flags rather than a kernel per op. Softmax and cross-entropy are fused in both directions — the backward pass writes probs − one_hot(label) directly, so there is no Jacobian to build. The full training set lives on the GPU for the whole run; each epoch reshuffles an index array on the host and uploads only the batch&#39;s indices, and a gather kernel pulls the rows. Optimiser is plain SGD with momentum.</p><p>It was written and reviewed on a machine without an NVIDIA GPU, so the repository is honest about that: build it on real hardware before trusting the numbers, and the README lists the places to check first if training misbehaves.</p></div><div class="subgraph" id="subgraph"><svg class="g-lines" aria-hidden="true" preserveAspectRatio="none"></svg><div class="subgrid"><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M9 12h6M9 16h4"/></svg></div><h2 class="h-3">Field notes</h2><span class="n">1</span><p>Dated entries from the work as it happened.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></div><h2 class="h-3">Metrics</h2><span class="n">2</span><p>What was measured, and what it came to.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.1 1.1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.1-1.1"/></svg></div><h2 class="h-3">Artefacts</h2><span class="n">1</span><p>Repositories, write-ups and demos.</p></div><div class="subcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9z"/><circle cx="8" cy="8" r="1.4"/></svg></div><h2 class="h-3">Skills</h2><span class="n">4</span><p>CUDA · C++ · GPU kernels · From scratch</p></div></div></div><div class="quickrow"><div class="quick"><div class="n">01</div><h2 class="h-3">784 → 256 → 10</h2><p>ReLU MLP, float32, row-major</p></div><div class="quick"><div class="n">02</div><h2 class="h-3">6 kernels</h2><p>matmul · bias+ReLU · softmax-CE fwd/bwd · gather · SGD</p></div></div></div><aside><div class="sidebox"><h3>Timeline</h3><div class="timeline"><div class="ev"><div class="when">Aug 2026</div><div class="what">Kernels, loader, training loop and Makefile (sm_70 – sm_90)</div></div></div></div><div class="sidebox" style="margin-top:16px;"><h3>Artefacts</h3><ul class="itemlist"><li><span class="nm">Repository</span><a href="https://github.com/morizin/mnist_c" rel="noopener">Open →</a></li></ul></div><a class="btn ghost edit-only" style="margin-top:16px;width:100%;justify-content:center;" href="../../studio.html?edit=mnist-cuda">Edit this project</a></aside></div></article></div>
+  <section class="wrap" id="related-sec" style="padding-block:30px 70px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin:0 0 20px;">
+      <div><span class="eyebrow">Connected nodes</span><h2 class="h-2" style="margin-top:12px;">Related projects</h2></div>
+      <a class="btn sm ghost" href="../../projects.html">All projects <span class="arw" aria-hidden="true">→</span></a>
+    </div>
+    <div class="listview"><article class="gcard g-card" data-id="movement-safety">
+  <a class="hit" href="../../projects/movement-safety/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/movement-safety.webp" alt="Movement Safety cover" loading="lazy" width="480" height="300"><span class="num">01</span></div>
+  <div class="bd"><div class="k"><i></i><span>Sensing &amp; Safety · Research prototype</span></div>
+    <h3><a href="../../projects/movement-safety/">Movement Safety</a></h3><p>Can synchronised accelerometer and gyroscope data from consenting phones characterise a physical interaction? A Rust research pipeline bootstrapped on two synthetic generators — one hand-authored, one MuJoCo — with the recall collapse between them published as the finding.</p>
+    <div class="subs"><span>Field notes <b>2</b></span><span>Metrics <b>3</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">Rust</span><span class="tag">MuJoCo</span><span class="tag">IMU</span></div></div>
+</article><article class="gcard g-card" data-id="crash-detector">
+  <a class="hit" href="../../projects/crash-detector/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/edge-camera.webp" alt="Crash Detector cover" loading="lazy" width="480" height="300"><span class="num">03</span></div>
+  <div class="bd"><div class="k"><i></i><span>Vehicles &amp; Safety · In progress</span></div>
+    <h3><a href="../../projects/crash-detector/">Crash Detector</a></h3><p>Predict an imminent crash from dashcam frames, vehicle sensors and current actuator state — then intervene to stabilise the vehicle in the seconds before impact.</p>
+    <div class="subs"><span>Field notes <b>1</b></span><span>Metrics <b>2</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">Computer Vision</span><span class="tag">IMU</span><span class="tag">Control</span></div></div>
+</article><article class="gcard g-card" data-id="making-ai-beneficial">
+  <a class="hit" href="../../projects/making-ai-beneficial/" tabindex="-1" aria-hidden="true"></a>
+  <div class="thumb"><img src="../../assets/upstage.webp" alt="Upstage: Making AI Beneficial cover" loading="lazy" width="480" height="300"><span class="num">04</span></div>
+  <div class="bd"><div class="k"><i></i><span>Competitions · Shipped</span></div>
+    <h3><a href="../../projects/making-ai-beneficial/">Upstage: Making AI Beneficial</a></h3><p>A 0.966 solution to Upstage&#39;s sequential-learning competition: a SAINT transformer, pseudo-labelled retraining, and an ensemble across seven training variants — all code and weights public.</p>
+    <div class="subs"><span>Field notes <b>1</b></span><span>Metrics <b>2</b></span><span>Artefacts <b>1</b></span></div><div class="tags cardtags"><span class="tag">Kaggle</span><span class="tag">Transformer</span><span class="tag">SAINT</span></div></div>
+</article></div>
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="wrap">
+    <p class="q">“Systems for a more human future.”<span class="by">— morizin</span></p>
+    <div class="mega" aria-hidden="true">morizin</div>
+    <div class="cols">
+      <div><span class="mono">The practice</span><ul style="margin-top:12px;"><li><a href="../../index.html">Home</a></li><li><a href="../../projects.html">Projects</a></li><li><a href="../../writing.html">Writing</a></li><li><a href="../../about.html">About Mohammed</a></li><li class="edit-only"><a href="../../studio.html">Content studio</a></li></ul></div>
+      <div><span class="mono">Elsewhere</span><ul style="margin-top:12px;" id="foot-social"><li><a href="https://github.com/morizin" rel="noopener">GitHub</a></li><li><a href="https://www.kaggle.com/morizin" rel="noopener">Kaggle</a></li><li><a href="https://www.linkedin.com/in/itsmorizin" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/MohammedRizin" rel="noopener">X</a></li><li><a href="https://medium.com/@mrizin2013" rel="noopener">Medium</a></li></ul></div>
+      <div><span class="mono">Contact</span><ul style="margin-top:12px;"><li><a id="foot-email" href="mailto:itsmorizin@gmail.com">itsmorizin@gmail.com</a></li><li><span id="foot-loc" style="color:var(--muted);font-size:14.5px;">Mumbai, India · works remotely</span></li></ul></div>
+    </div>
+    <div class="meta"><span>© <span id="year">2026</span> morizin</span></div>
+  </div>
+</footer>
+<script src="../../js/site.js?v=2757b441"></script>
+<script>
+MZ.initNav();
+MZ.load().then(function (c) { MZ.fillFooter(c.profile); }).catch(function () {});
+var sg = document.getElementById('subgraph'); if (sg) MZ.mountSubgraph(sg);
+</script>
+</body>
+</html>

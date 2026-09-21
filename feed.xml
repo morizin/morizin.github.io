@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+  <title>morizin — writing</title>
+  <link>https://morizin.github.io/writing.html</link>
+  <atom:link href="https://morizin.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Competition write-ups, field notes and method notes from Mohammed Rizin.</description>
+  <language>en</language>
+  <lastBuildDate>Mon, 21 Sep 2026 10:13:00 GMT</lastBuildDate>
+  <item>
+    <title><![CDATA[How we won VinBigData: an ensemble built to agree like radiologists]]></title>
+    <link>https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/</link>
+    <guid isPermaLink="true">https://morizin.github.io/writing/vinbigdata-1st-place-ensemble/</guid>
+    <pubDate>Thu, 17 Sep 2026 09:00:00 GMT</pubDate>
+    <description><![CDATA[First place in the VinBigData Chest X-ray Abnormalities Detection competition — a three-tier detector ensemble fused with a consensus variant of Weighted Boxes Fusion, the metric quirk we found, four things that did not work, and the submission we should have picked.]]></description>
+    <content:encoded><![CDATA[<p>We finished first in VinBigData&#39;s Chest X-ray Abnormalities Detection with a private-leaderboard mAP of <strong>0.314</strong> — and, as every Kaggler will recognise, with a better submission (0.321) sitting unselected in the queue. This is the short version of how the winning ensemble worked, why it worked, and the four things we tried that did nothing. The <a href="https://www.kaggle.com/competitions/vinbigdata-chest-xray-abnormalities-detection/writeups/s-1st-place-solution" rel="noopener">full team write-up is on Kaggle</a>.</p>
+<h2>The problem, briefly</h2>
+<p>Fourteen thoracic abnormalities to localise on chest radiographs, plus a fifteenth &quot;no finding&quot; class. The training labels came from several radiologists per image, and the test set was scored against their <em>consensus</em>. That last detail turned out to be the whole competition.</p>
+<h2>We merged late, and it cost us a validation scheme</h2>
+<p>We came together from separate teams, each with its own cross-validation split and its own best ensemble. There was no clean way to compare a model trained on my folds with one trained on Fatih&#39;s. So we did something that made us nervous and, in the end, paid off: we treated the public leaderboard as one more validation set, and we sorted every model into three tiers by how much we trusted its number.</p>
+<ul><li><strong>Fully validated</strong> — Detectron2 ResNet-101, YOLOv5, EfficientDet-D2, all on a shared split.</li><li><strong>Partially validated</strong> — a 5-fold YOLOv5.</li><li><strong>Public-LB only</strong> — everything else: two more EffDet-D2s, three YOLOv5 variants (one with test-time augmentation), a 16-class YOLO, a re-anchored YOLO, Detectron2 ResNet-50, and two community YOLOv5 baselines we retrained.</li></ul>
+<p>We also retrained our strongest models on one common split and ensembled those. On its own that &quot;clean&quot; ensemble did not beat the messy one on the private board.</p>
+<h2>The trick: fuse boxes the way radiologists agree</h2>
+<p>Every detector produced its own boxes. We merged them with <a href="https://github.com/ZFTurbo/Weighted-Boxes-Fusion" rel="noopener">Weighted Boxes Fusion</a> — and then with a variant Sergio wrote that changed the competition for us.</p>
+<p>Standard WBF clusters boxes that overlap above an IoU threshold and gives the merged box the <em>mean</em> of their confidences. Our variant, <strong>p_sum</strong>, gives it the <em>sum</em>, normalised at the end. The intuition is the test set itself: the ground truth was radiologists agreeing. A box that five models drew should outrank a box that one model drew with high confidence — because that is exactly how the labels were made. Switching the final stage from mean to sum moved the public score from <strong>0.319 to 0.331</strong>.</p>
+<h2>The metric had no penalty for extra boxes</h2>
+<p>Chris Deotte <a href="https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/discussion/229637" rel="noopener">pointed this out</a> and we confirmed it: adding low-confidence boxes could only help recall and never hurt precision at the operating points that mattered. We took a high-mAP model and appended every non-overlapping box from a high-recall model. The precision-recall curves kept their shape; their tails stretched from a recall ceiling of about 0.7 to past 0.8. We did not need it in the end — the ensemble&#39;s recall was already high — but it is the kind of thing worth knowing about a metric before you spend a week on architecture.</p>
+<h2>What did not work</h2>
+<ul><li><strong>A 14-class multi-label classifier as a gate.</strong> Train a sigmoid classifier on the whole image; drop any box whose class the classifier does not believe. It reduced the score. Swapping in PCAM attention pooling, which won CheXpert, did not rescue it.</li><li><strong>A crop classifier.</strong> EfficientNet-B6 on the cropped box, asked &quot;is this really class X?&quot; It could not tell diseases apart from a crop alone; it needed the whole image.</li><li><strong>NIH ChestX-ray14 as pre-training.</strong> Backbone trained as a multi-label classifier on NIH, transplanted into the detector, heads fine-tuned on the competition data. No measurable gain.</li><li><strong>One model per class.</strong> Each with its own anchors, trained on class-X plus no-finding. Some classes improved, others did not, and the split it used did not match anyone else&#39;s, so it could not join the validated tier. A final ensemble with it scored the same as the one we selected.</li></ul>
+<h2>The selection</h2>
+<p>Our best local-CV model (around 0.47 mAP on CV) scored 0.300 public / 0.287 private. Our best public-LB submission scored <strong>0.354 / 0.314</strong>, and that is the one we chose. Had we given the public-LB-only tier less weight, we would have submitted <strong>0.330 / 0.321</strong>. We over-fitted the public board, knew we might be, and did it anyway because it was the only validation we shared. It still won. It is not the lesson I would teach.</p>
+<h2>Hardware</h2>
+<p>Between us: four Quadro GV100s, four GTX 1080s, four Titan Xs, an RTX 3080 and a Quadro RTX 6000. The solution reproduces on a single GPU — the fleet bought us breadth of experiments, not the result.</p>
+<h2>Credits</h2>
+<p>Sergio Manuel Papadakis (socom20), Mohammed Rizin V K, avsanjay, Fatih Öztürk (fatihozturk). Baselines from corochann, awsaf49 and nxhong93 were part of the ensemble. Cite the Kaggle write-up if you use this.</p>
+<p><em>If you are working on medical imaging or any detection problem where the labels are a committee&#39;s opinion, the consensus-fusion idea travels. Say so on the home page and I will lay out how it would apply.</em></p>]]></content:encoded>
+    <category>Kaggle</category>
+    <category>Computer Vision</category>
+    <category>Medical Imaging</category>
+    <category>Object Detection</category>
+    <category>Ensembling</category>
+    <category>WBF</category>
+  </item>
+</channel>
+</rss>
